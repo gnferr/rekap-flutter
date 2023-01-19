@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_udemy/17Aug_Spring/model_user.dart';
 
@@ -15,6 +14,7 @@ class _CreateUserState extends State<CreateUser> {
   final namaController = TextEditingController();
 
   final emailController = TextEditingController();
+  String gender = "Pria";
 
   final genderController = TextEditingController();
 
@@ -26,12 +26,13 @@ class _CreateUserState extends State<CreateUser> {
 
   String? sex;
 
-  String? gender = "Pria";
-
   bool validate = false;
 
   @override
   Widget build(BuildContext context) {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    CollectionReference users = firestore.collection('users');
+
     return Scaffold(
       appBar: AppBar(title: Text("NEW USER")),
       body: Padding(
@@ -107,6 +108,11 @@ class _CreateUserState extends State<CreateUser> {
                 children: [
                   ElevatedButton(
                       onPressed: () async {
+                        // users.add({
+                        //   'nama': namaController.text,
+                        //   'email': emailController.text,
+                        //   'gender': gender
+                        // });
                         if (_formKey.currentState!.validate()) {
                           setState(() {
                             data = UserModel(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:learning_udemy/17Aug_Spring/create.dart';
 import 'package:learning_udemy/17Aug_Spring/model_user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SpringFlutter extends StatelessWidget {
   const SpringFlutter({super.key});
@@ -34,6 +34,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    CollectionReference users = firestore.collection('users');
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -58,7 +61,11 @@ class _HomePageState extends State<HomePage> {
         title: Text("Flutter x Spring"),
       ),
       body: Container(
-        child: FutureBuilder<List<UserModel>>(
+        child:
+
+            // FUTURE BUILDER //
+            ////////////////////
+            FutureBuilder<List<UserModel>>(
           future: getUser(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {

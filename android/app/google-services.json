@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "893287442328",
+    "project_id": "flutterapi-taro",
+    "storage_bucket": "flutterapi-taro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893287442328:android:dbf9d2c369a90937c52ded",
+        "android_client_info": {
+          "package_name": "com.example.learning_udemy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893287442328-l6m46vrb2k4niqqitj20roepqh1fhv5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZjaWB_GjXI8nzfjDABFlHYlBTqoyntUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893287442328-l6m46vrb2k4niqqitj20roepqh1fhv5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

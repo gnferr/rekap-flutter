@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:learning_udemy/17Aug_Spring/flutterxspring.dart';
 import 'package:learning_udemy/bloc/bloc_materi.dart';
+import 'package:learning_udemy/firebase_dbs/FireMain.dart';
 import 'package:learning_udemy/http/http_network.dart';
 import 'package:learning_udemy/provider_materi/provider_main.dart';
 
@@ -33,5 +34,10 @@ List<DaftarMateri> materi = [
     title: "Local Http",
     deskripsi: "~~~ simple crud localan cuy",
     page: HomePage(),
+  ),
+  DaftarMateri(
+    title: "Firebase Things",
+    deskripsi: "~~~ using firebase for store data",
+    page: FireMain(),
   ),
 ];
